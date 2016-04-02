@@ -19,8 +19,9 @@ void setup(){
 }
 
 void loop(){
-  int right = constrain(((map(analogRead(A0), 0, 1023,0,180) - 90) + (map(analogRead(A1), 0, 1023,0,180) - 90)/2)+90,0,180);
-  int left = constrain(((map(analogRead(A0), 0, 1023,0,180) - 90) - (map(analogRead(A1), 0, 1023,0,180) - 90)/2)+90,0,180);
+  
+  int right = constrain(((map(analogRead(A0), 0, 1023,180,0) - 90) + (map(analogRead(A1), 0, 1023,0,180) - 90)/2)+90,0,180);
+  int left = constrain(((map(analogRead(A0), 0, 1023,180,0) - 90) - (map(analogRead(A1), 0, 1023,0,180) - 90)/2)+90,0,180);
   
   int head = map(analogRead(A2), 0,1023,0,180)+2;
   
